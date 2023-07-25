@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Yandex Maps Borders",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      "matches": ["*://yandex.ru/maps/*"],
+	  "run_at": "document_start",
+	  "js": ["scripts/inject.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "scripts/custom.js" ],
+      "matches": [ "https://*/*" ]
+    }
+  ],
+  
+  "action": {
+	  "default_popup": "popup/index.html"
+  },
+  
+  "permissions": [ "tabs", "activeTab", "storage" ],
+  
+  "description": "Считывалка границ объектов с Yandex Maps",
+  "author": "Lisichkin",
+  "icons": {
+    "48": "icons/google-maps.png"
+  }
+}

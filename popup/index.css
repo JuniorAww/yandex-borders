@@ -1,0 +1,65 @@
+body {
+	background-color: #dddddd;
+	min-width: 300px;
+	max-width: 400px;
+}
+
+.input {
+	width: 290px;
+	max-width: 390px;
+	min-height: 80px;
+	max-height: 400px;
+}
+
+#download {
+	position: relative;;
+	margin-left: 5px;
+	bottom: 5px;
+	position: sticky;
+}
+
+#reset {
+	position: relative;;
+	right: 10px;
+	bottom: 5px;
+	position: sticky;
+}
+
+[code] {
+    position: relative;
+    width: 100%;
+    height: 100%;
+	margin-left: 0px;
+	left: 0px;
+	padding-left: 0px;
+}
+[code] > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: normal;
+    margin: 0;
+    padding: 10px;
+    border: none;
+    font-size: 12px;
+    font-family: monospace;
+    border-radius: 10px;
+}
+[code] > textarea {
+    z-index: 1;
+    color: transparent;
+    background: transparent;
+    caret-color: #000;
+    width: 100%;
+    height: 100%;
+}
+[code] > pre {
+    z-index: 0;
+    background: #263541;
+    color: #b8b8b8;
+}
+
+[code] > pre > code {
+    display: block;
+    white-space: pre-wrap;
+}
